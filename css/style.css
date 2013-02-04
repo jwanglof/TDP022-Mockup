@@ -1,0 +1,19 @@
+body {
+		background-color: #c0c00c;
+		margin: 0px; padding: 0px;
+}
+
+.container {
+		background-color: #ffffff;
+		width: 1024px;
+		height: 600px;
+
+		margin-top: 50px;
+		padding: 10px;
+		
+		border: 10px solid #000000;
+		border-bottom: 30px solid #000000;
+		border-radius: 7px;
+		-moz-border-radius: 7px;
+		box-shadow: 10px 10px 5px #c4c44c;
+}
