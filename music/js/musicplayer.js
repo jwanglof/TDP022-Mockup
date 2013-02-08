@@ -13,6 +13,14 @@ $(document).ready(function () {
 			return;
 		}
 
+		// If even number, set to green, else black
+		if ((objectIndex % 2) == 1) {
+			albuminfo.css("background", "green");
+		}
+		else {
+			albuminfo.css("background", "red");
+		}
+
 		var bodyWidth = $('body').width();
 		var albumWidth = $(this).outerWidth(true);
 		var elementsOnRow = Math.floor(bodyWidth / albumWidth);
@@ -27,6 +35,8 @@ $(document).ready(function () {
 		// Set the index in the h1
 		$("#albuminfo").text(objectIndex);
 
+		// Scroll to the elements and view the info div
+		scrollTo($(this));
 		albuminfo.slideDown();
 	});
 
@@ -35,6 +45,6 @@ $(document).ready(function () {
 
 function scrollTo(element) {
 	$('html, body').animate({
-		scrollTop: element.offset().top
+		scrollTop: element.offset().top - 50
 	}, 1000);
 };
