@@ -6,8 +6,7 @@
 }
 
 body {
-	background: #eee;
-
+	background: #FFF;
 	height: 100%;
 }
 
@@ -27,12 +26,28 @@ body {
 }
 
 #musiclibrary {
+	padding-top: 30px;
+	padding-bottom: 80px;
 	overflow: scroll;
+	margin: 0 auto;
+
+	text-align: center;
 }
 
 .album {
+	margin: 20px;
+	display: inline-block;
+}
+
+.album > img {
 	width: 200px;
-	margin: 40px;
+}
+
+#albuminfo {
+	background: #000;
+	height: 200px;
+	width: 100%;
+	color: #FFF;
 }
 
 #playercontrol {
