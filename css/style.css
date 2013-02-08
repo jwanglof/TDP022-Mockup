@@ -37,7 +37,7 @@ body {
 		border-radius: 7px;
     -moz-border-radius: 7px;
 
-		font-size: 22em;
+		font-size: 2000%;
 		letter-spacing: 0.5em;
 
 		margin: 0px auto;
@@ -59,4 +59,40 @@ body {
 		text-align: center;
 		padding-top: 10px;
 		padding-bottom: 10px;
+}
+
+.statusbar_cellular_container {
+		float: left;
+		width: 2px;
+		background-color: red;
+		margin-left: 5px;		
+}
+
+.statusbar_cellular_container._1 {
+		height: 20px;
+		margin-top: 4px;
+}
+.statusbar_cellular_container._2 {
+		height: 15px;
+		margin-top: 9px;
+}
+.statusbar_cellular_container._3 {
+		height: 10px;
+		margin-top: 14px;
+}
+.statusbar_cellular_container._4 {
+		height: 5px;
+		margin-top: 19px;
+}
+
+.statusbar_cellular_container.green {
+		background-color: chartreuse;
+}
+
+
+
+
+
+
+px;
 }
