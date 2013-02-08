@@ -51,10 +51,13 @@ body {
 }
 
 #playercontrol {
-	background: #CCC;
-	height: 80px;
+	background: -webkit-linear-gradient(top, #eaeaea, #dddddd);
+	border-top: 1px solid #CCC;
+	height: 70px;
 	width: 100%;
 
 	bottom: 0;
 	position: fixed;
 }
+
+
