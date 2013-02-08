@@ -1,0 +1,45 @@
+* {
+	margin: 0;
+	padding: 0;
+
+	font: 11px "Myriad Pro", "Verdana", sans-serif;
+}
+
+body {
+	background: #eee;
+
+	height: 100%;
+}
+
+.statusbar {
+	height: 30px;
+	width: 100%;
+	background: #181818;
+	position: fixed;
+}
+
+.statusbar img {
+
+}
+
+.right {
+	float: right;
+}
+
+#musiclibrary {
+	overflow: scroll;
+}
+
+.album {
+	width: 200px;
+	margin: 40px;
+}
+
+#playercontrol {
+	background: #CCC;
+	height: 80px;
+	width: 100%;
+
+	bottom: 0;
+	position: fixed;
+}
