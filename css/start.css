@@ -1,0 +1,75 @@
+.start_container {
+		width: 100%;
+		height: 100%;
+		padding-top: 30px;
+
+		margin: 0px auto;
+}
+
+.start_gps {
+		width: 95.2%;
+		height: 300px;
+		clear: both;
+		
+		border: 1px solid #000;
+		border-radius: 7px;
+    -moz-border-radius: 7px;
+
+		font-size: 2000%;
+		letter-spacing: 0.5em;
+
+		margin: 0px auto;
+		margin-bottom: 10px;
+		margin-top: 10px;
+		padding: 25px 0px;
+}
+
+.start_sub {
+		width: 30%;
+		
+		float: left;
+
+		border: 1px solid #000;
+		border-radius: 7px;
+    -moz-border-radius: 7px;
+
+		margin-left: 2.4%;
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
+}
+
+.statusbar_cellular_container {
+		float: left;
+		width: 2px;
+		background-color: red;
+		margin-left: 5px;		
+}
+
+.statusbar_cellular_container._1 {
+		height: 20px;
+		margin-top: 4px;
+}
+.statusbar_cellular_container._2 {
+		height: 15px;
+		margin-top: 9px;
+}
+.statusbar_cellular_container._3 {
+		height: 10px;
+		margin-top: 14px;
+}
+.statusbar_cellular_container._4 {
+		height: 5px;
+		margin-top: 19px;
+}
+
+.statusbar_cellular_container.green {
+		background-color: chartreuse;
+}
+
+#statusbar_clock {
+		float: right;
+		color: #fff;
+		font-size: 25px;
+		margin-right: 10px;
+}
