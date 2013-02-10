@@ -15,31 +15,15 @@ body {
 	height: 30px;
 	width: 100%;
 	background: #181818;
-	position: fixed;
+	position: top;
+        padding-top: 8px;
+        text-align: right;
 }
 
-.statusbar img {
-
-}
-
-.right {
-	float: right;
-}
-
-#musiclibrary {
-	overflow: scroll;
-}
-
-.album {
-	width: 200px;
-	margin: 40px;
-}
-
-#playercontrol {
-	background: #CCC;
-	height: 80px;
+.navbar {
+	height: 2px;
 	width: 100%;
-
-	bottom: 0;
-	position: fixed;
+	background: #181818;
+	position: top;
+        text-align: right;
 }
