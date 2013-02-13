@@ -5,12 +5,13 @@ $(document).ready(function () {
 			if (class_name.toLowerCase().indexOf("container") >= 0
 					&& class_name.toLowerCase().indexOf(except_div.toLowerCase())) {
 				$("." + class_name).hide("fast");
-				alert(class_name);
+				//alert(class_name);
 			}
 		});
 
+		// Hide all divs except except_div
 		$("." + except_div).show("fast");
-		alert("2" + except_div);
+		//alert("2" + except_div);
 	}
 
 	// Set the awesome clock in the right corner. WOOOOOP WOOOP
