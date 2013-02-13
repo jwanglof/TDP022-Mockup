@@ -1,25 +1,3 @@
-* {
-	margin: 0;
-	padding: 0;
-
-	font: 11px "Myriad Pro", "Verdana", sans-serif;
-}
-
-body {
-	background: #eee;
-}
-
-#container {
-		margin: 0px auto;
-}
-
-.statusbar {
-	height: 30px;
-	width: 100%;
-	background: #181818;
-	position: fixed;
-}
-
 .start_container {
 		width: 100%;
 		height: 100%;
@@ -61,38 +39,37 @@ body {
 		padding-bottom: 10px;
 }
 
-.statusbar_cellular_container {
+.statusbar_cellular {
 		float: left;
 		width: 2px;
 		background-color: red;
 		margin-left: 5px;		
 }
 
-.statusbar_cellular_container._1 {
+.statusbar_cellular._1 {
 		height: 20px;
 		margin-top: 4px;
 }
-.statusbar_cellular_container._2 {
+.statusbar_cellular._2 {
 		height: 15px;
 		margin-top: 9px;
 }
-.statusbar_cellular_container._3 {
+.statusbar_cellular._3 {
 		height: 10px;
 		margin-top: 14px;
 }
-.statusbar_cellular_container._4 {
+.statusbar_cellular._4 {
 		height: 5px;
 		margin-top: 19px;
 }
 
-.statusbar_cellular_container.green {
+.statusbar_cellular.green {
 		background-color: chartreuse;
 }
 
-
-
-
-
-
-px;
+#statusbar_clock {
+		float: right;
+		color: #fff;
+		font-size: 25px;
+		margin-right: 10px;
 }
