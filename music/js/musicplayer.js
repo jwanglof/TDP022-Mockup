@@ -2,13 +2,19 @@ $(document).ready(function () {
 	$("#last_clicked").hide();
 	$("#albuminfo").hide();
 
+	// When the #albuminfo isn't used we need to move it
 	$(".album").click(function() {
 		var albuminfo = $("#albuminfo");
 		var object = $(this);
-		var objectIndex = $(this).index() - 1;
 
 		// Slide up before doing anything else
 		albuminfo.slideUp(function() {
+			// Move it away from this div
+			albuminfo.insertAfter("#musiclibrary");
+
+			// Get a new index
+			var objectIndex = object.index() - 1;
+
 			// Just hide if double tap
 			if ($("#last_clicked").text() == objectIndex) {
 				$("#last_clicked").text(-1);
@@ -42,6 +48,16 @@ $(document).ready(function () {
 			albuminfo.slideDown();
 		});
 	});
+
+	// Toggle play/pause
+	$("#playToggle").click(function() {
+		if ($(this).attr('src') == './img/play_button.png')
+			$(this).attr('src', './img/pause_button.png');
+		else
+			$(this).attr('src', './img/play_button.png');
+	});
+
+	// Align everything in the middle on the #playercontrol
 
 });
 

@@ -60,4 +60,12 @@ body {
 	position: fixed;
 }
 
+#playToggle {
+	width: 40px;
+}
 
+#nowplaying {
+	width: 350px;
+	background: #ccc;
+	margin: 0 auto;
+}
