@@ -1,6 +1,23 @@
+// Set keyhandler for emulating home- and back-buttons
+$(document).keypress(function(event){
+	var keycode = (event.keyCode ? event.keyCode : event.which);
+
+	// H-key for home
+	if (keycode == '72') {
+		alert("Time to go to the home screen!");
+	}
+
+	// B-key for back
+	if (keycode == '66') {
+		alert("Time to back off!");
+	}
+});
+
 $(document).ready(function () {
 	// Hide the none used divs
+	$("#gps-library").hide();
 	$("#music-library").hide();
+	$("#movie-library").hide();
 
 	// Switch to the music page
 	$("#music-option").click(function() {
@@ -13,6 +30,19 @@ $(document).ready(function () {
 			// Move in the music-library to the #container
 			$("#container").prepend("#music-library");
 			$("#music-library").show();
+		});
+	});
+
+
+	// Switch to the GPS page
+	$("#gps-option").click(function() {
+		console.log("Going to the music library");
+	
+		// Move the content of the content-div to outside and hide it
+		$("#container > div").hide(function() {
+			$("#container > div").insertAfter("#container");
+			
+			// Move in the gps div to the #container
 		});
 	});
 

@@ -60,6 +60,7 @@ $(document).ready(function () {
 	});
 
 	// Align everything in the middle on the #playercontrol
+	/*
 	$("#playercontrol").children().each(function(index, e) {
 		var object = $("#playercontrol").children("div").eq(index);
 		var padding = $("#playercontrol").outerHeight() / 2;
@@ -67,7 +68,7 @@ $(document).ready(function () {
 
 		console.log(padding);
 		$(this).css('margin-top', padding + 'px');
-	});
+	});*/
 
 });
 

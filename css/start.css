@@ -1,87 +1,90 @@
 a {
-		text-decoration: none;
+	text-decoration: none;
 }
 
 .start_container {
-		width: 100%;
-		height: 100%;
-		padding-top: 30px;
+	width: 100%;
+	height: 100%;
+	padding-top: 30px;
 
-		text-align: center;
+	text-align: center;
 }
 
 .start_gps {
-		width: 65%;
-		height: 300px;
-		clear: both;
+	width: 65%;
+	height: 300px;
+	clear: both;
 		
-		border: 1px solid #000;
-		border-radius: 7px;
+	border: 1px solid #000;
+	border-radius: 7px;
     -moz-border-radius: 7px;
 
-		font-size: 2000%;
+	font-size: 2000%;
 
-		margin: 0px auto;
-		margin-bottom: 10px;
-		margin-top: 10px;
-		padding: 25px 0px;
+	margin: 0px auto;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	padding: 25px 0px;
 		
-		background-image: -webkit-linear-gradient(top, #2F2727, #1a82f7); 
+	background-image: -webkit-linear-gradient(top, #2F2727, #1a82f7); 
 		
-		box-shadow: 0 0 5px 5px #888;
+	box-shadow: 0 0 5px 5px #888;
 }
 
-.asd {
-		margin: 0px auto;
-		width: 65%;
+
+.start-button {
+	width: 290px;
+	margin: 0 20px;
+	padding: 0;
+	background: #CCC;
+	display: inline-block;
+
+	border-radius: 7px;
 }
 
-.start_sub {
-		height: 280px;
-
-		float: left;
-
-		border: 1px solid #000;
-		border-radius: 7px;
-    -moz-border-radius: 7px;
+.wide {
+	margin: 110px auto 20px;
+	margin-top: 110px;
+	width: 950px;
+	display: block;
 }
 
-.start_sub img {
-		margin-bottom: 10px;
-		padding: 0px 11px;
+.start-button img {
+	width: 150px;
 }
+
 
 .statusbar_cellular {
-		float: left;
-		width: 2px;
-		background-color: red;
-		margin-left: 5px;		
+	float: left;
+	width: 4px;
+	background-color: red;
+	margin-left: 4px;		
 }
 
 .statusbar_cellular._1 {
-		height: 20px;
-		margin-top: 4px;
+	height: 20px;
+	margin-top: 4px;
 }
 .statusbar_cellular._2 {
-		height: 15px;
-		margin-top: 9px;
+	height: 15px;
+	margin-top: 9px;
 }
 .statusbar_cellular._3 {
-		height: 10px;
-		margin-top: 14px;
+	height: 10px;
+	margin-top: 14px;
 }
 .statusbar_cellular._4 {
-		height: 5px;
-		margin-top: 19px;
+	height: 5px;
+	margin-top: 19px;
 }
 
 .statusbar_cellular.green {
-		background-color: chartreuse;
+	background-color: chartreuse;
 }
 
 #statusbar_clock {
-		float: right;
-		color: #fff;
-		font-size: 25px;
-		margin-right: 10px;
+	float: right;
+	color: #fff;
+	font-size: 25px;
+	margin-right: 10px;
 }
