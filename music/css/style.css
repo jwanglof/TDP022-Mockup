@@ -60,12 +60,23 @@ body {
 	position: fixed;
 }
 
-#playToggle {
-	width: 40px;
+.button {
+	padding: 0 4px;
+}
+
+.small {
+	padding-bottom: 6px;
 }
 
 #nowplaying {
 	width: 350px;
-	background: #ccc;
+	background: -webkit-linear-gradient(top, #eaf0f3, #a4a8ad);
+	border-radius: 5px;
+	padding: 6px 7px 5px;
 	margin: 0 auto;
+
+	box-shadow: 0 1px 0 #fff, inset 0 0 5px #555;
+	text-shadow: 0 1px #ccc;
+	text-align: center;
+	color: #303030;
 }

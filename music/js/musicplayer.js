@@ -1,6 +1,8 @@
 $(document).ready(function () {
 	$("#last_clicked").hide();
+	$("#pause-button").hide();
 	$("#albuminfo").hide();
+	$("#albuminfo").insertAfter("#musiclibrary");
 
 	// When the #albuminfo isn't used we need to move it
 	$(".album").click(function() {
@@ -51,13 +53,21 @@ $(document).ready(function () {
 
 	// Toggle play/pause
 	$("#playToggle").click(function() {
-		if ($(this).attr('src') == './img/play_button.png')
+		if ($(this).attr('src') == './img/play_button2.png')
 			$(this).attr('src', './img/pause_button.png');
 		else
-			$(this).attr('src', './img/play_button.png');
+			$(this).attr('src', './img/play_button2.png');
 	});
 
 	// Align everything in the middle on the #playercontrol
+	$("#playercontrol").children().each(function(index, e) {
+		var object = $("#playercontrol").children("div").eq(index);
+		var padding = $("#playercontrol").outerHeight() / 2;
+		padding -= ($(this).outerHeight() / 2);
+
+		console.log(padding);
+		$(this).css('margin-top', padding + 'px');
+	});
 
 });
 
