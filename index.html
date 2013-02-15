@@ -7,13 +7,14 @@
 	<script src="./js/start.js" type="text/javascript" ></script>
 	<script src="./js/musicplayer.js" type="text/javascript" ></script>
 
-	<link rel="stylesheet" type="text/css" href="css/global.css">
-	<link rel="stylesheet" type="text/css" href="css/start.css">
-	<link rel="stylesheet" type="text/css" href="css/musicplayer.css">
+	<link rel="stylesheet" type="text/css" href="./css/global.css">
+	<link rel="stylesheet" type="text/css" href="./css/musicplayer.css">
+	<link rel="stylesheet" type="text/css" href="./css/start.css">
 </head>
+
 <body>
 
-	<div class="statusbar">
+	<div id="statusbar">
 		<div class="statusbar_cellular _4 green"></div>
 		<div class="statusbar_cellular _3 green"></div>
 		<div class="statusbar_cellular _2"></div>
@@ -23,78 +24,69 @@
 
 	<div id="container">
 
-		<div class="start_container">
-
-			<div class="start-button wide">
-				<img id="gps-option" src="img/icons/gps2.png" />
+		<div id="start_container">
+			<div class="start-button wide gps">
 				<h1>Navigation</h1>
 			</div>
 
-			<div class="start-button">
-				<img id="music-option" src="img/icons/music.png" />
+			<div id="music-option" class="start-button music">
 				<h1>Music</h1>
 			</div>
 
-			<div class="start-button">
-				<img id="movie-option" src="img/icons/movie.png" />
-				<h1>Music</h1>
+			<div class="start-button movie">
+				<h1>Movies</h1>
 			</div>
 
 			<div class="start-button">
-				<img id="settings-option" src="img/icons/settings.png" />
-				<h1>Music</h1>
+				<h1>Settings</h1>
 			</div>
-
-		</div>
-
-	</div>
-
-	<div class="content"></div>
-
-	<div id="music-library">
-		<div id="musiclibrary" >
-			<span id="last_clicked">-1</span>
-
-			<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
-			<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
-			<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
-			<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
-			<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
-
-			<div id="albuminfo">
-				NADA
+		</div> <!-- end #start_container -->
+	
+		<div id="music-library">
+			<div id="musiclibrary" >
+				<span id="last_clicked">-1</span>
+	
+				<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
+				<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
+				<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
+				<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
+				<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
+	
+				<div id="albuminfo">
+					NADA
+				</div>
+	
+				<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
+				<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
+				<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
+				<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
+				<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
+	
+				<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
+				<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
+				<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
+				<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
+				<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
+				<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
+	
 			</div>
-
-			<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
-			<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
-			<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
-			<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
-			<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
-
-			<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
-			<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
-			<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
-			<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
-			<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
-			<div class="album"><img src="./img/stas.jpg" alt="Stas - Ossler" /></div>
-
-		</div>
-
-		<div id="playercontrol" >
-			<div style="float: left; color: #000; margin-left: 30px; height: 30px; margin-top: 20.5px;">
-				<img src="./img/prev_button.png" class="button small" alt="Prev button" />
-				<img src="./img/play_button2.png" id="playToggle" class="button" alt="Play button" />
-				<img src="./img/next_button.png" class="button small" alt="Next button" />
+	
+			<div id="playercontrol" >
+				<div style="float: left; color: #000; margin-left: 30px; height: 30px; margin-top: 20.5px;">
+					<img src="./img/prev_button.png" class="button small" alt="Prev button" />
+					<img src="./img/play_button2.png" id="playToggle" class="button" alt="Play button" />
+					<img src="./img/next_button.png" class="button small" alt="Next button" />
+				</div>
+	
+				<div id="nowplaying" >
+					<p>Decode</p>
+					<p>Paramore</p>
+					<p>brand new eyes</p>
+				</div>
+	
+				</div>
 			</div>
-
-			<div id="nowplaying" >
-				<p>Decode</p>
-				<p>Paramore</p>
-				<p>brand new eyes</p>
-			</div>
-
-			</div>
-		</div>
+		</div> <!-- End #music-library -->
 
 	</div>
 

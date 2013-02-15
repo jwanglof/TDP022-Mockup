@@ -4,7 +4,12 @@ $(document).keypress(function(event){
 
 	// H-key for home
 	if (keycode == '72') {
-		alert("Time to go to the home screen!");
+		console.log("Time to go to the home screen!");
+
+		// Hide all divs and show the right one
+		$("#container").children().hide();
+		$("body").removeClass();
+		$("#start_container").show();
 	}
 
 	// B-key for back
@@ -23,14 +28,14 @@ $(document).ready(function () {
 	$("#music-option").click(function() {
 		console.log("Going to the music library");
 
-		// Move the content of the content-div to outside and hide it
-		$("#container > div").hide(function() {
-			$("#container > div").insertAfter("#container");
+		// Change the background
+		$('body').addClass('music');
 
-			// Move in the music-library to the #container
-			$("#container").prepend("#music-library");
-			$("#music-library").show();
-		});
+		// Hide all divs
+		$("#container").children().hide();
+
+		// Show the music page
+		$("#music-library").show();
 	});
 
 
@@ -38,12 +43,7 @@ $(document).ready(function () {
 	$("#gps-option").click(function() {
 		console.log("Going to the music library");
 	
-		// Move the content of the content-div to outside and hide it
-		$("#container > div").hide(function() {
-			$("#container > div").insertAfter("#container");
-			
-			// Move in the gps div to the #container
-		});
+		$("#container").children().hide();
 	});
 
 	/*function hideDiw(except_div) {
