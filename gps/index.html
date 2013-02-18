@@ -27,12 +27,23 @@
 
   <body onload="initialize();">
     <div class="statusbar">
+      <div class="statusbar_cellular _4 green"></div>
+      <div class="statusbar_cellular _3 green"></div>
+      <div class="statusbar_cellular _2"></div>
+      <div class="statusbar_cellular _1"></div>
+    <button onclick="geocode()">Navigate To</button>
     <input type="text" id="search_box" value=""/>
-    <button onclick="geocode()">Search</button>
     </div>
     <div id="googleMap" style="width:100%;height:380px;"></div>
-    <div class="navbar"></div>
-    <div class="infobar"><img src="../img/gpsnav.png"></div>
-    <div class="navbar"></div>
+    <div class="wrapper">
+      <div class="first">
+        ETA: 13 min and 37 sec </br>
+        Destination: Drottninggatan 50 </br>
+        Speed: 23 km/h
+      </div>
+      <div class="second">
+        <img src="img/gpsnav.png"></img>
+      </div>
+    </div>
   </body>
 </html>
