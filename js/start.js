@@ -24,6 +24,7 @@ $(document).ready(function () {
 	$("#music-library").hide();
 	$("#movie-library").hide();
 	$("#settings").hide();
+	$("#gps").hide();
 
 	// Switch to the music page
 	$("#music-option").click(function() {
@@ -65,9 +66,11 @@ $(document).ready(function () {
 
 	// Switch to the GPS page
 	$("#gps-option").click(function() {
-		console.log("Going to the music library");
+		console.log("Going to the GPS");
 	
 		$("#container").children().hide();
+
+	    $("#gps").show();
 	});
 
 	/*function hideDiw(except_div) {
