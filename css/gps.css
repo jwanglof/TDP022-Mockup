@@ -1,0 +1,43 @@
+* {
+	margin: 0;
+	padding: 0;
+	font: 11px "Myriad Pro", "Verdana", sans-serif;
+}
+
+body {
+	background: #eee;
+
+	height: 100%;
+}
+
+.statusbar {
+	height: 30px;
+	width: 100%;
+	background: #181818;
+	position: top;
+        padding-top: 8px;
+        text-align: right;
+}
+
+.wrapper {
+    width: 100%;
+    height: 140px;
+    border: 2px solid black;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+h1 {
+    font-size: 250%;
+}
+
+.first {
+    height: 140px;
+    width: 47%;
+    float: left;
+}
+
+.second {
+    height: 140px;
+    overflow: hidden;
+}
