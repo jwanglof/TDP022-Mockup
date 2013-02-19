@@ -23,6 +23,8 @@ $(document).ready(function () {
 	$("#gps-library").hide();
 	$("#music-library").hide();
 	$("#movie-library").hide();
+	$("#settings").hide();
+	$("#gps").hide();
 
 	// Switch to the music page
 	$("#music-option").click(function() {
@@ -38,12 +40,37 @@ $(document).ready(function () {
 		$("#music-library").show();
 	});
 
+	// Switch to the settings page
+	$("#settings-option").click(function() {
+		console.log("Going to the settings window");
+
+		$("#container").children().hide();
+		$("#settings_options").children().hide();
+		$("#settings").show();
+	});
+
+	$("#settings-option_login").click(function() {
+		console.log("Going to settings > login window");
+
+		$("#container").children().hide();
+		
+		$("#login").show();
+	});
+	$("#settings-option_sharing").click(function() {
+		console.log("Going to settings > sharing window");
+
+		$("#container").children().hide();
+
+		$("#settings_sharing").show();
+	});
 
 	// Switch to the GPS page
 	$("#gps-option").click(function() {
-		console.log("Going to the music library");
+		console.log("Going to the GPS");
 	
 		$("#container").children().hide();
+
+	    $("#gps").show();
 	});
 
 	/*function hideDiw(except_div) {
