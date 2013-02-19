@@ -42,7 +42,7 @@
 				<h1>Movies</h1>
 			</div>
 
-			<div id="settings-option" class="start-button">
+			<div id="settings-option" class="start-button settings">
 				<h1>Settings</h1>
 			</div>
 		</div> <!-- end #start_container -->
@@ -120,30 +120,46 @@
 			<div id="settings-option_sharing" class="start-button wide settings_sharing-option">
 				<h1>Sharing</h1>
 			</div>
-			
-			<div id="settings_options">
-				<div id="login">
-					<form>
-						<h1>Username</h1>
-						<input type="text" id="username" />
-
-						<h1>Password</h1>
-						<input type="password" id="password" />
-
-						<br />
-						<input type="button" value="Login" id="login_button" />
-						<input type="reset" value="Reset" id="reset_button" />
-					</form>
-				</div>
-
-				<div id="sharing">
-					<form>
-						<h1>Facebook Login</h1>
-						<input type="text" id="fb_username" />
-					</form>
-				</div>
-			</div>
 		</div> <!-- End #settings -->
+
+		<div id="settings_options">
+			<div id="login" class="login_sharing_prefs">
+				<form>
+					<h1>Username</h1>
+					<input type="text" id="username" placeholder="Username" />
+
+					<h1>Password</h1>
+					<input type="password" id="password" placeholder="Password" />
+
+					<br />
+					<input type="button" value="Login" id="login_button" />
+					<input type="reset" value="Reset" id="reset_button" />
+				</form>
+			</div>
+
+			<div id="sharing" class="login_sharing_prefs">
+				<form>
+					<h1>Facebook Login</h1>
+					<input type="text" id="fb_username" placeholder="Username" />
+					<br />
+					<input type="password" id="fb_password" placeholder="Password" />
+
+					<br />
+					<input type="button" value="Login" id="login_button" />
+					<input type="reset" value="Reset" id="reset_button" />
+				</form>
+				<form>
+					<h1>Twitter Login</h1>
+					<input type="text" id="tw_username" placeholder="Username" />
+					<br />
+					<input type="password" id="tw_password" placeholder="Password" />
+
+					<br />
+					<input type="button" value="Login" id="login_button" />
+					<input type="reset" value="Reset" id="reset_button" />
+				</form>
+			</div>
+		</div>
 
 		<div id="gps">
 

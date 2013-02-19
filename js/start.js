@@ -24,6 +24,7 @@ $(document).ready(function () {
 	$("#music-library").hide();
 	$("#movie-library").hide();
 	$("#settings").hide();
+	$("#settings_options").hide();
 	$("#gps").hide();
 
 	// Switch to the music page
@@ -45,7 +46,7 @@ $(document).ready(function () {
 		console.log("Going to the settings window");
 
 		$("#container").children().hide();
-		$("#settings_options").children().hide();
+
 		$("#settings").show();
 	});
 
@@ -54,17 +55,17 @@ $(document).ready(function () {
 
 		$("#container").children().hide();
 
-//		$("#settings_options").siblings("#login").show();
-
-		$("#login").show();
-		alert("Asdas");
+		$("div#settings_options").show();
+		$("#sharing").hide();
 	});
+
 	$("#settings-option_sharing").click(function() {
 		console.log("Going to settings > sharing window");
 
 		$("#container").children().hide();
 
-		$("#settings_sharing").show();
+		$("div#settings_options").show();
+		$("#login").hide();
 	});
 
 	// Switch to the GPS page

@@ -8,11 +8,11 @@
 		background-size: cover;
 }
 
-#settings_login #settings_sharing {
-		margin-top: 30px;
+.login_sharing_prefs {
+		margin-top: 10%;		
 }
 
-#settings_login #settings_sharing input[type="text"],input[type="password"],input[type="button"],input[type="reset"] {
+.login_sharing_prefs input[type="text"],input[type="password"],input[type="button"],input[type="reset"] {
 		border: 1px solid #c0c0c0;
 		font-size: 30px;
 		color: #000;
@@ -27,11 +27,11 @@
 		margin-top: 10px;
 }
 
-#settings_login input[type="button"],input[type="reset"] {
+.login_sharing_prefs input[type="button"],input[type="reset"] {
 		width: 224px;
 }
 
-#settings_login h1 {
+.login_sharing_prefs h1 {
 	margin-top: 83px;
 	padding: 5px 0;
 	background: #000;
@@ -41,6 +41,6 @@
 	text-align: center;
 }
 
-#settings_login form {
+.login_sharing_prefs form {
 		text-align: center;
 }
