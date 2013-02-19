@@ -88,7 +88,7 @@ body {
 #playercontrol {
 	background: -webkit-linear-gradient(top, #eaeaea, #dddddd);
 	border-top: 1px solid #CCC;
-	height: 70px;
+	height: 50px;
 	width: 100%;
 
 	bottom: 0;
@@ -104,7 +104,7 @@ body {
 	padding-bottom: 6px;
 }
 
-#nowplaying {
+/*#nowplaying {
 	width: 350px;
 	background: -webkit-linear-gradient(top, #eaf0f3, #a4a8ad);
 	border-radius: 5px;
@@ -115,11 +115,47 @@ body {
 	text-shadow: 0 1px #ccc;
 	text-align: center;
 	color: #303030;
+}*/
+
+#nowplaying {
+	float: right;
+	margin: 5px 40px;
+	width: 250px;
+	height: 40px;
+}
+
+#nowplaying p {
+	font: 12px "Myriad Pro", "Verdana", sans-serif;
+}
+
+#nowplaying img {
+	height: 38px;
+	border: 1px solid #CCC;
+	margin-right: 10px;
 }
 
 .playingtrack {
 	background: -webkit-linear-gradient(top, #3D92DB, #306FA6);
 	color: #FFF;
+}
+
+/* Sliders */
+#duration_outer {
+	background: -webkit-linear-gradient(top, #214D73, #306FA6);
+	padding: 1px;
+	height: 8px;
+	width: 500px;
+
+	margin: 21px auto;
+	border-radius: 10px;
+	box-shadow: 0 1px 1px #FFF;
+}
+
+#duration_inner {
+	background: -webkit-linear-gradient(top, #44A1F2, #3A89CF);
+	height: 8px;
+	width: 200px;
+	border-radius: 10px;
 }
 
 #shadow {

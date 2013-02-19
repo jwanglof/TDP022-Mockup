@@ -1,7 +1,28 @@
 $(document).ready(function () {
 	// Set height of shadow div and height on #albumtracks
 	$("#shadow").css("height", $(document).height()).hide();
-	$("#albumtracks").css("height", ($(document).height() - 475));
+	$("#albumtracks").css("height", ($(document).height() - 455));
+
+	// Load player with the one song that exists
+	$("#music-url").attr("src", "tracks/ritd.mp3");
+	document.getElementById('musicplayer').load();
+
+	// Start the progress bar
+	setInterval(function() {
+		var player = document.getElementById('musicplayer');
+		var currentTime = player.currentTime;
+		var duration = player.duration;
+
+		$("#duration_inner").css("width", (currentTime/duration) * 502);
+	}, 100);
+
+	// Look for clicks in the progressbar
+	$("#duration_outer").click(function(e) {
+		var percentage = (e.pageX - $("#duration_outer").offset().left) / 502;
+		var player = document.getElementById('musicplayer');
+		percentage *= player.duration;
+		player.currentTime = percentage;
+	});
 
 	$("#last_clicked").hide();
 	$("#pause-button").hide();
@@ -60,10 +81,16 @@ $(document).ready(function () {
 
 	// Toggle play/pause
 	$("#playToggle").click(function() {
-		if ($(this).attr('src') == './img/play_button2.png')
+		if ($(this).attr('src') == './img/play_button2.png') {
 			$(this).attr('src', './img/pause_button.png');
-		else
+			document.getElementById('musicplayer').play();
+			console.log(document.getElementById('musicplayer').currentTime);
+		}
+		else {
 			$(this).attr('src', './img/play_button2.png');
+			document.getElementById('musicplayer').pause();
+			console.log(document.getElementById('musicplayer').duration);
+		}
 	});
 
 	// Align everything in the middle on the #playercontrol

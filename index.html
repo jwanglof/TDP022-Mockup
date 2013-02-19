@@ -48,7 +48,11 @@
 		</div> <!-- end #start_container -->
 		
 		<div id="music-library">
+			<audio id="musicplayer">
+				<source id="music-url" type="audio/mpeg" />
+			</audio>
 			<div id="shadow" ></div>
+
 			<div id="musiclibrary" >
 				<span id="last_clicked">-1</span>
 
@@ -86,16 +90,24 @@
 			</div>
 			
 			<div id="playercontrol" >
-				<div style="float: left; color: #000; margin-left: 30px; height: 30px; margin-top: 20.5px;">
+				<div id="nowplaying" >
+					<img src="img/stas.jpg" align="left" />
+					<div style="margin-top: 7px;" >
+						<p>The devil stole the beat from the lord</p>
+						<p>The Hellacopters</p>
+					</div>
+				</div>
+
+				<div style="float: left; color: #000; margin-left: 30px; height: 30px; margin-top: 10.5px;">
 					<img src="./img/prev_button.png" class="button small" alt="Prev button" />
 					<img src="./img/play_button2.png" id="playToggle" class="button" alt="Play button" />
 					<img src="./img/next_button.png" class="button small" alt="Next button" />
 				</div>
-				<div id="nowplaying" >
-					<p>Decode</p>
-					<p>Paramore</p>
-					<p>brand new eyes</p>
+
+				<div id="duration_outer" >
+					<div id="duration_inner" ></div>
 				</div>
+
 				
 			</div>
 		</div> <!-- End #music-library -->
