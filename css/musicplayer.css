@@ -64,11 +64,13 @@ body {
 #albuminfo h1 {
 	margin-top: 20px;
 	font: bold 24px "Myriad Pro", "Verdana", sans-serif;
+	color: #4D4D4D;
 }
 
 #albuminfo h2 {
 	margin-bottom: 20px;
 	font: 16px "Myriad Pro", "Verdana", sans-serif;
+	color: #4D4D4D;
 }
 
 #albumtracks {
@@ -83,6 +85,7 @@ body {
 	padding: 13px 0 13px 20px;
 	background: #FFF;
 	border-bottom: 1px solid #CCC;
+	color: #4D4D4D;
 }
 
 #playercontrol {
@@ -119,6 +122,7 @@ body {
 
 #nowplaying {
 	float: right;
+	color: #4D4D4D;
 	margin: 5px 40px;
 	width: 250px;
 	height: 40px;
@@ -140,22 +144,30 @@ body {
 }
 
 /* Sliders */
-#duration_outer {
+.duration {
+	width: 500px;
+}
+
+.volume {
+	width: 100px;
+	float: left;
+}
+
+.outer {
 	background: -webkit-linear-gradient(top, #214D73, #306FA6);
 	padding: 1px;
 	height: 8px;
-	width: 500px;
 
 	margin: 21px auto;
 	border-radius: 10px;
 	box-shadow: 0 1px 1px #FFF;
 }
 
-#duration_inner {
+.inner {
 	background: -webkit-linear-gradient(top, #44A1F2, #3A89CF);
 	height: 8px;
-	width: 200px;
 	border-radius: 10px;
+	width: 0;
 }
 
 #shadow {
