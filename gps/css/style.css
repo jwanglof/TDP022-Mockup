@@ -26,16 +26,18 @@ body {
     overflow: hidden;
 }
 
+h1 {
+    font-size: 250%;
+}
+
 .first {
     height: 140px;
-    width: 50%;
+    width: 47%;
     float: left;
-    background: #a9b620;
 }
 
 .second {
     height: 140px;
-    background: #d81417;
     overflow: hidden;
 }
 
