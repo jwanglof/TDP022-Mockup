@@ -10,16 +10,12 @@ body {
 	height: 100%;
 }
 
-.statusbar {
+/*.statusbar {
 	height: 30px;
 	width: 100%;
 	background: #181818;
 	position: fixed;
-}
-
-.statusbar img {
-
-}
+}*/
 
 .right {
 	float: right;
@@ -39,15 +35,54 @@ body {
 	display: inline-block;
 }
 
-.album > img {
+.album img {
 	width: 200px;
+	border: 2px solid #000;
 }
 
 #albuminfo {
-	background: #000;
-	height: 200px;
-	width: 100%;
-	color: #FFF;
+	background: #EBEBEB;
+	box-shadow: 0px 5px 5px #000;
+	height: 100%;
+	width: 350px;
+	text-align: center;
+
+	padding-top: 60px;
+	color: #4D4D4D;
+
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: 3;
+}
+
+#albuminfo img {
+	width: 250px;
+	border: 2px solid #000;
+}
+
+#albuminfo h1 {
+	margin-top: 20px;
+	font: bold 24px "Myriad Pro", "Verdana", sans-serif;
+}
+
+#albuminfo h2 {
+	margin-bottom: 20px;
+	font: 16px "Myriad Pro", "Verdana", sans-serif;
+}
+
+#albumtracks {
+	border-top: 1px solid #CCC;
+	margin-bottom: 30px;
+	height: 206px;
+	overflow: scroll;
+}
+
+.trackname {
+	text-align: left;
+	padding: 13px 0 13px 20px;
+	background: #FFF;
+	border-bottom: 1px solid #CCC;
 }
 
 #playercontrol {
@@ -58,6 +93,7 @@ body {
 
 	bottom: 0;
 	position: fixed;
+	z-index: 4;
 }
 
 .button {
@@ -79,4 +115,19 @@ body {
 	text-shadow: 0 1px #ccc;
 	text-align: center;
 	color: #303030;
+}
+
+.playingtrack {
+	background: -webkit-linear-gradient(top, #3D92DB, #306FA6);
+	color: #FFF;
+}
+
+#shadow {
+	background: #000;
+	opacity: 0.7;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 2;
 }

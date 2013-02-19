@@ -1,8 +1,26 @@
 $(document).ready(function () {
+	// Set height of shadow div and height on #albumtracks
+	$("#shadow").css("height", $(document).height()).hide();
+	$("#albumtracks").css("height", ($(document).height() - 475));
+
 	$("#last_clicked").hide();
 	$("#pause-button").hide();
 	$("#albuminfo").hide();
 	$("#albuminfo").insertAfter("#musiclibrary");
+
+	// If you click outside the #albuminfo, hide the #shadow
+	$("#shadow").click(function() {
+		$(this).fadeOut();
+		$("#last_clicked").text(-1);
+		$("#albuminfo").hide("slide", {direction: 'left'});
+	});
+
+	// Set track as playing
+	$(".trackname").click(function() {
+		console.log("Playing track");
+		$(".playingtrack").removeClass("playingtrack");
+		$(this).addClass("playingtrack");
+	});
 
 	// When the #albuminfo isn't used we need to move it
 	$(".album").click(function() {
@@ -10,6 +28,7 @@ $(document).ready(function () {
 		var object = $(this);
 
 		// Slide up before doing anything else
+		$("#shadow").hide();
 		albuminfo.slideUp(function() {
 			// Move it away from this div
 			albuminfo.insertAfter("#musiclibrary");
@@ -22,32 +41,20 @@ $(document).ready(function () {
 				$("#last_clicked").text(-1);
 				return;
 			}
-	
-			// If even number, set to green, else black
-			if ((objectIndex % 2) == 1) {
-				albuminfo.css("background", "green");
-			}
-			else {
-				albuminfo.css("background", "red");
-			}
-	
-			var bodyWidth = $('body').width();
-			var albumWidth = object.outerWidth(true);
-			var elementsOnRow = Math.floor(bodyWidth / albumWidth);
-			var row = Math.floor(objectIndex / elementsOnRow) + 1;
-			var index = (row * elementsOnRow) - 1;
-			var appendOn = $('.album').get(index);
-	
-			// Move the albuminfo
-			$("#last_clicked").text(objectIndex);
-			albuminfo.insertAfter(appendOn);
+
+			// Fill the divs with relevant shit
+			$("#albuminfo > img").attr('src', object.attr('src'));
 	
 			// Set the index in the h1
-			$("#albuminfo").text(objectIndex);
+			$("#last_clicked").text(objectIndex);
+
+			// Dim the background
+			$("#shadow").fadeIn();
 	
 			// Scroll to the elements and view the info div
-			scrollTo(object);
-			albuminfo.slideDown();
+			//scrollTo(object);
+			$("#albuminfo").show("slide", {direction: 'left'});
+			//albuminfo.slideDown();
 		});
 	});
 
