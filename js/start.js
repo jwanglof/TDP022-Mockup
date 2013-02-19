@@ -23,6 +23,7 @@ $(document).ready(function () {
 	$("#gps-library").hide();
 	$("#music-library").hide();
 	$("#movie-library").hide();
+	$("#settings").hide();
 
 	// Switch to the music page
 	$("#music-option").click(function() {
@@ -38,6 +39,29 @@ $(document).ready(function () {
 		$("#music-library").show();
 	});
 
+	// Switch to the settings page
+	$("#settings-option").click(function() {
+		console.log("Going to the settings window");
+
+		$("#container").children().hide();
+
+		$("#settings").show();
+	});
+
+/*	$("#settings_login-option").click(function() {
+		console.log("Going to settings > login window");
+
+		$("#container").children().hide();
+
+		$("#settings_login").show();
+	});
+	$("#settings_sharing-option").click(function() {
+		console.log("Going to settings > sharing window");
+
+		$("#container").children().hide();
+
+		$("#settings_sharing").show();
+	});*/
 
 	// Switch to the GPS page
 	$("#gps-option").click(function() {

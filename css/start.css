@@ -12,14 +12,10 @@ a {
 	text-decoration: none;
 }
 
-
-/*.start_container {
-	width: 100%;
-	height: 100%;
-	padding-top: 30px;
-
-	text-align: center;
-}*/
+#start_container {
+		margin: 0px auto;
+		text-align: center;
+}
 
 .start_gps {
 	width: 65%;
@@ -44,7 +40,7 @@ a {
 
 
 .start-button {
-	width: 290px;
+	width: 280px;
 	height: 210px;
 	margin: 0 20px;
 	background: #CCC;
@@ -64,7 +60,7 @@ a {
 
 .wide {
 	margin: 110px auto 20px;
-	width: 950px;
+	width: 930px;
 	display: block;
 }
 
