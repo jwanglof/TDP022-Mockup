@@ -45,24 +45,24 @@ $(document).ready(function () {
 		console.log("Going to the settings window");
 
 		$("#container").children().hide();
-
+		$("#settings_options").children().hide();
 		$("#settings").show();
 	});
 
-/*	$("#settings_login-option").click(function() {
+	$("#settings-option_login").click(function() {
 		console.log("Going to settings > login window");
 
 		$("#container").children().hide();
-
-		$("#settings_login").show();
+		
+		$("#login").show();
 	});
-	$("#settings_sharing-option").click(function() {
+	$("#settings-option_sharing").click(function() {
 		console.log("Going to settings > sharing window");
 
 		$("#container").children().hide();
 
 		$("#settings_sharing").show();
-	});*/
+	});
 
 	// Switch to the GPS page
 	$("#gps-option").click(function() {
