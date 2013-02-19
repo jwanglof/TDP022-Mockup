@@ -1,27 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBdI1eEjK1TvFfnKNvBstJGoa-UNv9Z3pM&sensor=false">
-    </script>
     <link href="./css/style.css" type="text/css" rel="stylesheet" />
-
     <script>
-      var geocoder;
-      function initialize()
+      function search()
       {
-      geocoder = new google.maps.Geocoder();
-      myLatLng = new google.maps.LatLng(51.508742,-0.120850);
-      var mapProp = {
-      center:myLatLng,
-      zoom:16,
-      mapTypeId:google.maps.MapTypeId.ROADMAP
-      };
-      var map=new google.maps.Map(document.getElementById("googleMap")
-      ,mapProp);
+      var text = document.getElementById("search_box").value;
+      document.getElementById("derp").innerHTML="Destination: " + text;
+      document.getElementById("search_box").value = "";
       }
-      marker.setMap(map);
-
-      google.maps.event.addDomListener(window, 'load', initialize);
     </script>
   </head>
 
@@ -31,18 +18,19 @@
       <div class="statusbar_cellular _3 green"></div>
       <div class="statusbar_cellular _2"></div>
       <div class="statusbar_cellular _1"></div>
-    <button onclick="geocode()">Navigate To</button>
+    <button onclick="search()">Navigate To</button>
     <input type="text" id="search_box" value=""/>
     </div>
-    <div id="googleMap" style="width:100%;height:380px;"></div>
+    <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/?ie=UTF8&amp;ll=40.731743,-73.985376&amp;spn=0.232584,0.528374&amp;t=m&amp;z=12&amp;layer=c&amp;cbll=40.731743,-73.985376&amp;panoid=uYuuT9atn3tosTR7G546_g&amp;cbp=12,206.65,,0,1.46&amp;source=embed&amp;output=svembed"></iframe><br /><small><a href="http://maps.google.com/?ie=UTF8&amp;ll=40.731743,-73.985376&amp;spn=0.232584,0.528374&amp;t=m&amp;z=12&amp;layer=c&amp;cbll=40.731743,-73.985376&amp;panoid=uYuuT9atn3tosTR7G546_g&amp;cbp=12,206.65,,0,1.46&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
     <div class="wrapper">
       <div class="first">
-        ETA: 13 min and 37 sec </br>
-        Destination: Drottninggatan 50 </br>
-        Speed: 23 km/h
+        <h1>ETA: 13 min and 37 sec</h1> </br>
+        <h1 id="derp">Destination: Drottninggatan 50</h1> </br>
+        <h1>Speed: 23 km/h</h1>
       </div>
+      <h1>200m</h1>
       <div class="second">
-        <img src="img/gpsnav.png"></img>
+        <img src="img/left.png"></img>
       </div>
     </div>
   </body>
