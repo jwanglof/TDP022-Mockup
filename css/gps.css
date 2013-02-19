@@ -4,12 +4,6 @@
 	font: 11px "Myriad Pro", "Verdana", sans-serif;
 }
 
-body {
-	background: #eee;
-
-	height: 100%;
-}
-
 .statusbar {
 	height: 30px;
 	width: 100%;
