@@ -13,9 +13,11 @@ body {
 		margin: 0px auto;
 }
 
-.statusbar {
+#statusbar {
 	height: 30px;
 	width: 100%;
 	background: #181818;
 	position: fixed;
+
+	z-index: 100;
 }

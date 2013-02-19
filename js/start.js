@@ -29,7 +29,7 @@ $(document).ready(function () {
 		console.log("Going to the music library");
 
 		// Change the background
-		$('body').addClass('music');
+		// $('body').addClass('music');
 
 		// Hide all divs
 		$("#container").children().hide();
