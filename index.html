@@ -90,33 +90,35 @@
 		</div> <!-- End #music-library -->
 
 		<div id="settings">
-			<div id="settings_login-option" class="start-button wide settings_login-option">
+			<div id="settings-option_login" class="start-button wide settings_login-option">
 				<h1>Login</h1>
 			</div>
 
-			<div id="settings_sharing-option" class="start-button wide settings_sharing-option">
+			<div id="settings-option_sharing" class="start-button wide settings_sharing-option">
 				<h1>Sharing</h1>
 			</div>
+			
+			<div id="settings_options">
+				<div id="login">
+					<form>
+						<h1>Username</h1>
+						<input type="text" id="username" />
 
-			<div id="login">
-				<form>
-					<h1>Username</h1>
-					<input type="text" id="username" />
+						<h1>Password</h1>
+						<input type="password" id="password" />
 
-					<h1>Password</h1>
-					<input type="password" id="password" />
+						<br />
+						<input type="button" value="Login" id="login_button" />
+						<input type="reset" value="Reset" id="reset_button" />
+					</form>
+				</div>
 
-					<br />
-					<input type="button" value="Login" id="login_button" />
-					<input type="reset" value="Reset" id="reset_button" />
-				</form>
-			</div>
-
-			<div id="sharing">
-				<form>
-					<h1>Facebook Login</h1>
-					<input type="text" id="fb_username" />
-				</form>
+				<div id="sharing">
+					<form>
+						<h1>Facebook Login</h1>
+						<input type="text" id="fb_username" />
+					</form>
+				</div>
 			</div>
 		</div> <!-- End #settings -->
 
