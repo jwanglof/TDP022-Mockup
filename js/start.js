@@ -53,8 +53,11 @@ $(document).ready(function () {
 		console.log("Going to settings > login window");
 
 		$("#container").children().hide();
-		
+
+//		$("#settings_options").siblings("#login").show();
+
 		$("#login").show();
+		alert("Asdas");
 	});
 	$("#settings-option_sharing").click(function() {
 		console.log("Going to settings > sharing window");
