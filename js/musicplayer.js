@@ -1,5 +1,7 @@
 $(document).ready(function () {
+	// Set height of shadow div and height on #albumtracks
 	$("#shadow").css("height", $(document).height()).hide();
+	$("#albumtracks").css("height", ($(document).height() - 475));
 
 	$("#last_clicked").hide();
 	$("#pause-button").hide();
@@ -10,7 +12,14 @@ $(document).ready(function () {
 	$("#shadow").click(function() {
 		$(this).fadeOut();
 		$("#last_clicked").text(-1);
-		$("#albuminfo").hide();
+		$("#albuminfo").hide("slide", {direction: 'left'});
+	});
+
+	// Set track as playing
+	$(".trackname").click(function() {
+		console.log("Playing track");
+		$(".playingtrack").removeClass("playingtrack");
+		$(this).addClass("playingtrack");
 	});
 
 	// When the #albuminfo isn't used we need to move it
@@ -36,24 +45,6 @@ $(document).ready(function () {
 			// Fill the divs with relevant shit
 			$("#albuminfo > img").attr('src', object.attr('src'));
 	
-			// If even number, set to green, else black
-			/*if ((objectIndex % 2) == 1) {
-				albuminfo.css("background", "green");
-			}
-			else {
-				albuminfo.css("background", "red");
-			}*/
-	
-			/*var bodyWidth = $('body').width();
-			var albumWidth = object.outerWidth(true);
-			var elementsOnRow = Math.floor(bodyWidth / albumWidth);
-			var row = Math.floor(objectIndex / elementsOnRow) + 1;
-			var index = (row * elementsOnRow) - 1;
-			var appendOn = $('.album').get(index);
-	
-			// Move the albuminfo
-			albuminfo.insertAfter(appendOn);*/
-	
 			// Set the index in the h1
 			$("#last_clicked").text(objectIndex);
 
@@ -62,7 +53,7 @@ $(document).ready(function () {
 	
 			// Scroll to the elements and view the info div
 			//scrollTo(object);
-			$("#albuminfo").show();
+			$("#albuminfo").show("slide", {direction: 'left'});
 			//albuminfo.slideDown();
 		});
 	});

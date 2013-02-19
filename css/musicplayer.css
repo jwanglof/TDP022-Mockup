@@ -35,7 +35,7 @@ body {
 	display: inline-block;
 }
 
-.album > img {
+.album img {
 	width: 200px;
 	border: 2px solid #000;
 }
@@ -117,6 +117,10 @@ body {
 	color: #303030;
 }
 
+.playingtrack {
+	background: -webkit-linear-gradient(top, #3D92DB, #306FA6);
+	color: #FFF;
+}
 
 #shadow {
 	background: #000;
