@@ -1,6 +1,7 @@
 function search()
 {
     var text = document.getElementById("search_box").value;
+    document.getElementById("speed").innerHTML="Speed: 23 km/h";
     document.getElementById("dest").innerHTML="Destination: " + text;
     document.getElementById("search_box").value = "";
     
@@ -14,6 +15,10 @@ function search()
     if(toaMin > 59) {
         houres += 1;
         toaMin /= 60;
+    }
+
+    if(text.toLowerCase() == "bronx") {
+        document.getElementById("speed").innerHTML="Speed: 56 km/h";
     }
     
     if(text.toLowerCase() == "harlem") {
