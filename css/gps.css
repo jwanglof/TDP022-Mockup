@@ -1,10 +1,4 @@
-* {
-	margin: 0;
-	padding: 0;
-	font: 11px "Myriad Pro", "Verdana", sans-serif;
-}
-
-.statusbar {
+.gps_statusbar {
 	height: 30px;
 	width: 100%;
 	background: #181818;
