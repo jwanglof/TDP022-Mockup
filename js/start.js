@@ -1,112 +1,125 @@
+var page_array = new Array();
+
+function go_back() {
+ console.log("Time to go to BACK. BACK TO THE FUUUUUUTUUUURE!!!!1111!1!11!!1!");
+ hide_all_the_divs();
+
+ if (page_array.length == 0) {
+	$('#start_container').show();
+	console.log("BaSJJASDJAD");
+	return;
+ }
+
+ var popped_page = $(page_array.pop());
+ console.log(page_array);
+ popped_page.show();
+};
+
+function go_home() {
+ console.log("Time to go to the home screen!");
+ hide_all_the_divs();
+ page_array = [];
+ $("#start_container").show();
+};
+
+function hide_all_the_divs(except_div) {
+ $("#gps-library").hide();
+ $("#music-library").hide();
+ $("#movie-library").hide();
+ $("#settings").hide();
+ $("#settings_options").hide();
+ $("#gps").hide();
+
+ $(except_div).show();
+};
+
 // Set keyhandler for emulating home- and back-buttons
 $(document).keypress(function(event){
-	var keycode = (event.keyCode ? event.keyCode : event.which);
+ var keycode = (event.keyCode ? event.keyCode : event.which);
 
-	// H-key for home
-	if (keycode == '72') {
-		console.log("Time to go to the home screen!");
+ // H-key for home
+ if (keycode == '72') {
+	go_home();
+ }
 
-		// Hide all divs and show the right one
-		$("#container").children().hide();
-		$("body").removeClass();
-		$("#start_container").show();
-	}
-
-	// B-key for back
-	if (keycode == '66') {
-		alert("Time to back off!");
-	}
+ // B-key for back
+ if (keycode == '66') {
+	go_back();
+ }
 });
 
 $(document).ready(function () {
-	// Hide the none used divs
-	$("#gps-library").hide();
-	$("#music-library").hide();
-	$("#movie-library").hide();
-	$("#settings").hide();
-	$("#settings_options").hide();
-	$("#gps").hide();
+ // Hide the none used divs
+ hide_all_the_divs();
 
-	// Switch to the music page
-	$("#music-option").click(function() {
-		console.log("Going to the music library");
+ $("#phys_home").click(function() {
+	go_home();
+ });
 
-		// Change the background
-		// $('body').addClass('music');
+ $("#phys_back").click(function() {
+	go_back();
+ });
 
-		// Hide all divs
-		$("#container").children().hide();
+ // Switch to the music page
+ $("#music-option").click(function() {
+	console.log("Going to the music library");
 
-		// Show the music page
-		$("#music-library").show();
-	});
+	// Change the background
+	// $('body').addClass('music');
 
-	// Switch to the settings page
-	$("#settings-option").click(function() {
-		console.log("Going to the settings window");
+	// Hide all divs
+	$("#container").children().hide();
 
-		$("#container").children().hide();
+	// Show the music page
+	$("#music-library").show();
+ });
 
-		$("#settings").show();
-	});
+ // Switch to the settings page
+ $("#settings-option").click(function() {
+	console.log("Going to the settings window");
 
-	$("#settings-option_login").click(function() {
-		console.log("Going to settings > login window");
+	$("#container").children().hide();
 
-		$("#container").children().hide();
+	$("#settings").show();
+ });
 
-		$("div#settings_options").show();
-		$("#sharing").hide();
-	});
+ $("#settings-option_login").click(function() {
+	console.log("Going to settings > login window");
 
-	$("#settings-option_sharing").click(function() {
-		console.log("Going to settings > sharing window");
+	hide_all_the_divs("#settings_options");
 
-		$("#container").children().hide();
+	// Add page to page_array to be able to go back
+	page_array.push("#settings");
 
-		$("div#settings_options").show();
-		$("#login").hide();
-	});
+	$("#sharing").hide();
+	$("#login").show();
+ });
 
-	// Switch to the GPS page
-	$("#gps-option").click(function() {
-		console.log("Going to the GPS");
+ $("#settings-option_sharing").click(function() {
+	console.log("Going to settings > sharing window");
+
+	hide_all_the_divs("#settings_options");
+
+	// Add page to page_array to be able to go back
+	page_array.push("#settings");
+
+	$("#login").hide();
+	$("#sharing").show();
+ });
+
+ // Switch to the GPS page
+ $("#gps-option").click(function() {
+	console.log("Going to the GPS");
 	
-		$("#container").children().hide();
+	$("#container").children().hide();
+	$("#gps").show();
+ });
 
-	    $("#gps").show();
-	});
-
-	/*function hideDiw(except_div) {
-		$("#container div").each(function(i) {
-			var class_name = $(this).attr("class");
-			if (class_name.toLowerCase().indexOf("container") >= 0
-					&& class_name.toLowerCase().indexOf(except_div.toLowerCase())) {
-				$("." + class_name).hide("fast");
-				//alert(class_name);
-			}
-		});
-
-		// Hide all divs except except_div
-		$("." + except_div).show("fast");
-		//alert("2" + except_div);
-	}*/
-
-	// Set the awesome clock in the right corner. WOOOOOP WOOOP
+ // Set the awesome clock in the right corner. WOOOOOP WOOOP
+ var d = new Date();
+ $("#statusbar_clock").text(d.getHours() + ":" + (d.getMinutes()<10?'0':'') + d.getMinutes());
+ setInterval(function() {
 	var d = new Date();
 	$("#statusbar_clock").text(d.getHours() + ":" + (d.getMinutes()<10?'0':'') + d.getMinutes());
-	setInterval(function() {
-		var d = new Date();
-		$("#statusbar_clock").text(d.getHours() + ":" + (d.getMinutes()<10?'0':'') + d.getMinutes());
-	}, 5000);
-
-	/*hideDiw("start_container");
-	
-	$("a").click(function(event) {
-		event.preventDefault();
-
-		var name = $(this).attr("id");
-		hideDiw(name);
-	});*/
-
+ }, 5000);
 });
