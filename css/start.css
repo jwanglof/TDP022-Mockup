@@ -137,3 +137,17 @@ a {
 	font-size: 25px;
 	margin-right: 10px;
 }
+
+#statusbar_buttons {
+	float: left;
+	position: relative;
+	left: 42%;
+
+}
+
+.physical_buttons {
+		float: left;
+		margin-right: 10px;
+		font-size: 22px;
+		cursor: pointer;
+}

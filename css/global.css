@@ -5,6 +5,11 @@
 	font: 11px "Myriad Pro", "Verdana", sans-serif;
 }
 
+body {
+	background: #FFF;
+	height: 100%;
+}
+
 #container {
 		margin: 0px auto;
 }
