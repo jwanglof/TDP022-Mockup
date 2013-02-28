@@ -14,6 +14,38 @@
 .album {
 	margin: 20px;
 	display: inline-block;
+	position: relative;
+	text-align: left;
+}
+
+.album h1 {
+	position: absolute;
+	width: 100%;
+	top: 161px;
+	width: 100%;
+	background: #000;
+	color: #FFF;
+	padding-top: 5px;
+}
+
+.album h1 span {
+	padding-left: 10px;
+	font-size: 18px;
+
+}
+
+.album h2 span {
+	padding-left: 10px;
+}
+
+.album h2 {
+	position: absolute;
+	width: 100%;
+	top: 184px;
+	width: 100%;
+	background: #000;
+	color: #FFF;
+	padding-bottom: 5px;
 }
 
 .album img {

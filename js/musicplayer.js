@@ -45,6 +45,8 @@ $(document).ready(function () {
 		// Start playing the song
 		$("#playToggle").attr('src', './img/pause_button.png');
 		document.getElementById('musicplayer').play();
+
+
 	});
 
 	// When the #albuminfo isn't used we need to move it
