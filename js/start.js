@@ -34,7 +34,7 @@ function hide_all_the_divs(except_div) {
 };
 
 // Set keyhandler for emulating home- and back-buttons
-$(document).keypress(function(event){
+/*$(document).keypress(function(event){
  var keycode = (event.keyCode ? event.keyCode : event.which);
 
  // H-key for home
@@ -46,7 +46,7 @@ $(document).keypress(function(event){
  if (keycode == '66') {
 	go_back();
  }
-});
+});*/
 
 $(document).ready(function () {
  // Hide the none used divs
