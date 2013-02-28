@@ -1,9 +1,8 @@
 .gps_statusbar {
-	height: 30px;
+	height: 10px;
 	width: 100%;
 	background: #181818;
 	position: top;
-        padding-top: 8px;
         text-align: right;
 }
 

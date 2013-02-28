@@ -167,13 +167,12 @@
 		<div id="gps">
 		  <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/?ie=UTF8&amp;ll=40.731743,-73.985376&amp;spn=0.232584,0.528374&amp;t=m&amp;z=12&amp;layer=c&amp;cbll=40.731743,-73.985376&amp;panoid=uYuuT9atn3tosTR7G546_g&amp;cbp=12,206.65,,0,1.46&amp;source=embed&amp;output=svembed"></iframe>
 		  <div class="gps_statusbar">
-		    <button onclick="search()">Navigate To</button>
-		    <input type="text" id="search_box" value=""/>
 		  </div>	
 		  <div class="wrapper">
 		    <div class="first">
 		      <h1 id="eta">ETA:</h1> </br>
-		      <h1 id="dest">Destination:</h1> </br>
+		      <h1 id="dest" ondblclick="doSearch()">Destination:
+		      <input type="text" id="search_box" value="" onkeydown="search(event)"/></h1></br>
 		      <h1 id="speed">Speed: 23 km/h</h1> </br>
                       <h1 id="toa">Time on arrival:</h1>
 		    </div>
