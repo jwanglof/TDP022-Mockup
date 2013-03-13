@@ -18,13 +18,21 @@ h1 {
 
 .first {
     height: 140px;
-    width: 47%;
+    width: 40%;
     float: left;
 }
 
 .second {
     height: 140px;
+    widht: 20%;
     overflow: hidden;
+    float: left;
+}
+
+.third {
+    height: 140px;
+    width: 40%;
+    float: left;
 }
 
 iframe {
