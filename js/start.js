@@ -25,7 +25,7 @@ function go_home() {
 function hide_all_the_divs(except_div) {
 	$("#gps-library").hide();
 	$("#music-library").hide();
-	$("#movie-library").hide();
+	$("#movielibrary").hide();
 	$("#settings").hide();
 	$("#settings_options").hide();
 	$("#gps").hide();
@@ -73,6 +73,12 @@ $(document).ready(function () {
 	// Show the music page
 	$("#music-library").show();
 });
+
+	// Switch to the muci page
+	$("#movie-option").click(function() {
+		$("#container").children().hide();
+		$("#movielibrary").show();
+	});
 
  // Switch to the settings page
  $("#settings-option").click(function() {
