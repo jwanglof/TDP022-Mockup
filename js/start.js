@@ -83,30 +83,6 @@ $(document).ready(function () {
  	$("#settings").show();
  });
 
- /*$("#settings-option_login").click(function() {
- 	console.log("Going to settings > login window");
-
- 	hide_all_the_divs("#settings_options");
-
-	// Add page to page_array to be able to go back
-	page_array.push("#settings");
-
-	$("#sharing").hide();
-	$("#login").show();
-});
-
- $("#settings-option_sharing").click(function() {
- 	console.log("Going to settings > sharing window");
-
- 	hide_all_the_divs("#settings_options");
-
-	// Add page to page_array to be able to go back
-	page_array.push("#settings");
-
-	$("#login").hide();
-	$("#sharing").show();
-});*/
-
  // Switch to the GPS page
  $("#gps-option").click(function() {
  	console.log("Going to the GPS");
