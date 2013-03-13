@@ -12,21 +12,37 @@
     overflow: hidden;
 }
 
-h1 {
+.wrapper h1 {
     font-size: 150%;
 }
 
 .first {
     height: 140px;
-    width: 47%;
+    width: 40%;
     float: left;
 }
 
 .second {
     height: 140px;
+    width: 20%;
     overflow: hidden;
+    float: left;
+}
+
+.third {
+    height: 140px;
+    width: 40%;
+    float: left;
 }
 
 iframe {
     margin-top: 30px;
+}
+
+.inline_style {
+    float: left;
+}
+
+.width200 {
+    width: 140px;
 }
