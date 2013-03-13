@@ -148,28 +148,42 @@
 		</div> <!-- End #settings -->
 
 		<div id="gps">
-		  <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/?ie=UTF8&amp;ll=40.731743,-73.985376&amp;spn=0.232584,0.528374&amp;t=m&amp;z=12&amp;layer=c&amp;cbll=40.731743,-73.985376&amp;panoid=uYuuT9atn3tosTR7G546_g&amp;cbp=12,206.65,,0,1.46&amp;source=embed&amp;output=svembed"></iframe>
-		  <div class="gps_statusbar">
-		  </div>	
-		  <div class="wrapper">
-		    <div class="first">
-		      <h1 id="eta">ETA:</h1> </br>
-		      <h1 id="dest" ondblclick="doSearch()">Destination:
-		      <input type="text" id="search_box" value=""/><button id="submitbtn" onclick="search()">GO</button></h1></br>
-		      <h1 id="speed">Speed: 23 km/h</h1> </br>
-                      <h1 id="toa">Time on arrival:</h1>
-		    </div>
-		    <div class="second">
-                      <h1>200m</h1></br>
-                      <img src="img/gps/left.png"></img>
-		    </div>
-                    <div class="third">
-                      <h1>Current Street: 2nd Ave & 13th Street</h1></br>
-                      <h1>Next Turn: E 12th Street</h1>
-                    </div>
-		  </div>
-		</div>
+			<iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/?ie=UTF8&amp;ll=40.731743,-73.985376&amp;spn=0.232584,0.528374&amp;t=m&amp;z=12&amp;layer=c&amp;cbll=40.731743,-73.985376&amp;panoid=uYuuT9atn3tosTR7G546_g&amp;cbp=12,206.65,,0,1.46&amp;source=embed&amp;output=svembed"></iframe>
+			<div class="gps_statusbar"></div>	
+			<div class="wrapper">
+				<div class="first">
+					<div class="inline_style width200">
+						<h1>ETA:</h1>
+						<h1>Destination:</h1>
+						<h1>Speed: 23 km/h</h1>
+						<h1>Time on arrival:</h1>
+					</div>
+					<div class="inline_style">
+						<h1 id="eta">-</h1>
+						<h1 id="dest"><input type="text" id="search_box" value=""/><button id="submitbtn" onclick="search()">GO</button></h1>
+						<h1 id="speed">-</h1>
+						<h1 id="toa">-</h1>
+					</div>
+				</div>
 
+				<div class="second">
+					<h1>200m</h1></br>
+					<img src="img/gps/left.png"></img>
+				</div>
+
+				<div class="third">
+					<div class="inline_style width200">
+						<h1>Current Street:</h1>
+						<h1>Next Turn:</h1>
+					</div>
+					<div class="inline_style">
+						<h1>2nd Ave & 13th Street</h1>
+						<h1> E 12th Street</h1>
+					</div>
+					<br />
+				</div>
+			</div>
+		</div> <!-- End #gps -->
 	</div>
 
 </body>
