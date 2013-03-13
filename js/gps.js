@@ -1,12 +1,10 @@
-function search(event)
-{
-    if(event.keyCode == 13) {
-	
+function search()
+{	
+
 	var text = document.getElementById("search_box").value;
 	document.getElementById("speed").innerHTML="Speed: 23 km/h";
-	document.getElementById("dest").innerHTML="Destination: " + text;
-	document.getElementById("search_box").value = "";
-	
+	document.getElementById("dest").innerHTML="Destination: " + "<button id=\"newdest\" onclick=\"doSearch()\">" + text + "</button>";
+
 	var min = Math.floor((Math.random()*12)+1);
 	var sec = Math.floor((Math.random()*60)+1);
 
@@ -21,25 +19,23 @@ function search(event)
 
 	if(text.toLowerCase() == "bronx") {
             document.getElementById("speed").innerHTML="Speed: 56 km/h";
-	}
-	
-	if(text.toLowerCase() == "harlem") {
+	} 
+
+        if(text.toLowerCase() == "harlem") {
             document.getElementById("eta").innerHTML="ETA: 13 min and 37 sec";
             var toaMin = minutes + 13;
-            var sec = 37;
-            if(toaMin > 59) {
+            var sec = 37; 
+           if(toaMin > 59) {
 		houres += 1;
 		toaMin /= 60;
-            }
+           }
             document.getElementById("toa").innerHTML="Time on arrival: " + hours + ":" + toaMin + ":" + sec;
 	} else {
             document.getElementById("eta").innerHTML="ETA: " + min + " min and " + sec + " sec"; 
             document.getElementById("toa").innerHTML="Time on arrival: " + hours + ":" + toaMin + ":" + sec;
 	}
-    }
-
 }
 
 function doSearch() {
-    document.getElementById("dest").innerHTML="Destination: " + "<input type=\"text\" id=\"search_box\" value=\"\" onkeydown=\"search(event)\"/>"
+    document.getElementById("dest").innerHTML="Destination: " + "<input type=\"text\" id=\"search_box\" value=\"\"/><button id=\"submitbtn\" onclick=\"search()\">GO</button>"
 }
