@@ -33,6 +33,50 @@ function hide_all_the_divs(except_div) {
 	$(except_div).show();
 };
 
+$(document).ready(function () {
+	// Hide the none used divs
+	hide_all_the_divs();
+
+	$("#phys_home").click(function() {
+		go_home();
+	});
+
+	$("#phys_back").click(function() {
+		go_back();
+	});
+
+	// Switch to the music page
+	$("#music-option").click(function() {
+		console.log("Going to the music library");
+		// Hide all divs
+		$("#container").children().hide();
+		// Show the music page
+		$("#music-library").show();
+	});
+
+	// Switch to the settings page
+	$("#settings-option").click(function() {
+		console.log("Going to the settings window");
+		$("#container").children().hide();
+		$("#settings").show();
+	});
+
+	// Switch to the GPS page
+	$("#gps-option").click(function() {
+		console.log("Going to the GPS");
+		$("#container").children().hide();
+		$("#gps").show();
+	});
+
+	// Set the awesome clock in the right corner. WOOOOOP WOOOP
+	var d = new Date();
+	$("#statusbar_clock").text(d.getHours() + ":" + (d.getMinutes()<10?'0':'') + d.getMinutes());
+	setInterval(function() {
+		var d = new Date();
+		$("#statusbar_clock").text(d.getHours() + ":" + (d.getMinutes()<10?'0':'') + d.getMinutes());
+	}, 5000);
+});
+
 // Set keyhandler for emulating home- and back-buttons
 /*$(document).keypress(function(event){
  var keycode = (event.keyCode ? event.keyCode : event.which);
@@ -47,55 +91,3 @@ function hide_all_the_divs(except_div) {
 	go_back();
  }
 });*/
-
-$(document).ready(function () {
- // Hide the none used divs
- hide_all_the_divs();
-
- $("#phys_home").click(function() {
- 	go_home();
- });
-
- $("#phys_back").click(function() {
- 	go_back();
- });
-
- // Switch to the music page
- $("#music-option").click(function() {
- 	console.log("Going to the music library");
-
-	// Change the background
-	// $('body').addClass('music');
-
-	// Hide all divs
-	$("#container").children().hide();
-
-	// Show the music page
-	$("#music-library").show();
-});
-
- // Switch to the settings page
- $("#settings-option").click(function() {
- 	console.log("Going to the settings window");
-
- 	$("#container").children().hide();
-
- 	$("#settings").show();
- });
-
- // Switch to the GPS page
- $("#gps-option").click(function() {
- 	console.log("Going to the GPS");
-
- 	$("#container").children().hide();
- 	$("#gps").show();
- });
-
- // Set the awesome clock in the right corner. WOOOOOP WOOOP
- var d = new Date();
- $("#statusbar_clock").text(d.getHours() + ":" + (d.getMinutes()<10?'0':'') + d.getMinutes());
- setInterval(function() {
- 	var d = new Date();
- 	$("#statusbar_clock").text(d.getHours() + ":" + (d.getMinutes()<10?'0':'') + d.getMinutes());
- }, 5000);
-});
