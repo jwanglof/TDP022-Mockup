@@ -2,6 +2,14 @@ var page_array = new Array();
 
 function go_back() {
 	console.log("Time to go to BACK. BACK TO THE FUUUUUUTUUUURE!!!!1111!1!11!!1!");
+
+	if ($("#screen").is(":visible")) {
+		// If in a movie, back to browsing
+		$("#screen > video").get(0).pause();
+		$("#screen").fadeOut();
+		return;
+	};
+
 	hide_all_the_divs();
 
 	if (page_array.length == 0) {
@@ -10,7 +18,6 @@ function go_back() {
 		return;
 	}
 
-	$("#screen > video").get(0).pause();
 
 	var popped_page = $(page_array.pop());
 	console.log(page_array);
