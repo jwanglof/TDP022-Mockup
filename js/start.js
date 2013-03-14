@@ -10,6 +10,8 @@ function go_back() {
 		return;
 	}
 
+	$("#screen > video").get(0).pause();
+
 	var popped_page = $(page_array.pop());
 	console.log(page_array);
 	popped_page.show();
@@ -19,6 +21,10 @@ function go_home() {
 	console.log("Time to go to the home screen!");
 	hide_all_the_divs();
 	page_array = [];
+
+	// Pause the video
+	$("#screen > video").get(0).pause();
+
 	$("#start_container").show();
 };
 
